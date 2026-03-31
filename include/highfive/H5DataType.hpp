@@ -61,6 +61,11 @@ class IntegerType;
 ///
 class DataType: public Object {
   public:
+    explicit DataType(hid_t hid) noexcept :
+        Object(hid)
+    {
+    }
+    
     bool operator==(const DataType& other) const;
 
     bool operator!=(const DataType& other) const;
